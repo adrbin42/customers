@@ -13,7 +13,10 @@
       let objArr = retObj.results;
       console.log(objArr);
       for(let i = 0;i<objArr.length;i++){
+        customers.innerHTML = objArr[i].email;
+        customers.innerHTML = objArr[i].picture.thumbnail;
 
+        //console logging all of user data
         console.log(objArr[i].picture.thumbnail);
         console.log(objArr[i].name.title);
         console.log(objArr[i].name.first);

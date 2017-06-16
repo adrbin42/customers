@@ -9,27 +9,21 @@
   fetch("https://randomuser.me/api/?results=12").then(function(response){
       response.json().then(function(data){
       let customers = document.querySelector(".customers");
-      let pictures = document.querySelector("#pictures");
-      let name = document.querySelector("#name");
-      let email = document.querySelector("#email");
-      let location = document.querySelector("#location");
-      let phone = document.querySelector("#phone");
-
-
       let objArr = data.results;
+      let custData = "";
       console.log(objArr);
 
       for(let i = 0;i<objArr.length;i++){
 
-        pictures.innerHTML += "<img src=" + objArr[i].picture.large + "><br>";
-        name.innerHTML +=
-        objArr[i].name.title + " " + objArr[i].name.first + " " + objArr[i].name.last+"<br>";
-        email.innerHTML += objArr[i].email+"<br>";
-        location.innerHTML += objArr[i].location.street + " " +
-        objArr[i].location.city + " " + objArr[i].location.state + " " + objArr[i].location.postcode+"<br>";
-        phone.innerHTML += objArr[i].phone+"<br>";
-
+        custData += "<img src=" + objArr[i].picture.large + ">";
+        custData += objArr[i].name.title + " " + objArr[i].name.first + " " + objArr[i].name.last;
+        custData += objArr[i].email;
+        custData += objArr[i].location.street + " " +objArr[i].location.city
+        + " " + objArr[i].location.state + " " + objArr[i].location.postcode;
+        custData += objArr[i].phone+"<br>";
       };
+
+      customers.innerHTML = custData;
 
     });
   });

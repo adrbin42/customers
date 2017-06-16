@@ -12,7 +12,12 @@
   background: transparent;
 }
 
+.custdata {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .customers {
   display: flex;
-  flex-flow: row, wrap;
+  flex-direction: column;
 }

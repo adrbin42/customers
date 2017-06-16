@@ -14,10 +14,14 @@
 
 .custdata {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+
 }
 .customers {
-  display: flex;
-  flex-direction: column;
+
+}
+
+img {
+  height: 10vw;
+  width: 8vw;
 }

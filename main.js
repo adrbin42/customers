@@ -15,12 +15,12 @@
 
       for(let i = 0;i<objArr.length;i++){
 
-        custData += "<img src=" + objArr[i].picture.large + ">";
-        custData += objArr[i].name.title + " " + objArr[i].name.first + " " + objArr[i].name.last;
-        custData += objArr[i].email;
-        custData += objArr[i].location.street + " " +objArr[i].location.city
-        + " " + objArr[i].location.state + " " + objArr[i].location.postcode;
-        custData += objArr[i].phone+"<br>";
+        custData += "<div class='picture'><img src=" + objArr[i].picture.large + "></div>";
+        custData += "<div class='fullname'>" + objArr[i].name.title + " " + objArr[i].name.first + " " + objArr[i].name.last + "</div>";
+        custData += "<div class='email'>" + objArr[i].email + "</div>";
+        custData += "<div class='address'>" + objArr[i].location.street + " " +objArr[i].location.city
+        + " " + objArr[i].location.state + " " + objArr[i].location.postcode + "</div>";
+        custData += "<div class='phone'>" + objArr[i].phone+"</div>";
       };
 
       customers.innerHTML = custData;
